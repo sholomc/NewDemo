@@ -1,10 +1,9 @@
-system requirements SCSreqs:"SCS"
-for IntegratedSCS::DCS
+system requirements SCSreqs:"SCS" for IntegratedSCS::DCS
 use constants SCSConstants  
 [
-	val WeightLimit = 1.8
-	val BandwidthCapacity = 0.100
-	val ThroughputCapacity = 1.2
+	val WeightLimit = 1.8 kg
+	val BandwidthCapacity = 0.100 mbytesps
+	val ThroughputCapacity = 1.2  mips
 	val PowerCapacity = 2.5
 	
 		
@@ -18,6 +17,14 @@ use constants SCSConstants
 		see goal SCSStakeholderGoals.g1
 		
 	] 
+	
+	requirement Comms_R1
+	[
+		description this " data volume across bus shall not exceed 80% of BandwidthCapacity"
+		rationale "All data from sensors to processor and from processor to actuators use the bus"
+		mitigates "the risk of contention for bus resource"
+		
+	]
 	
 	
 ]
