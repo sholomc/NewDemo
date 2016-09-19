@@ -1,0 +1,21 @@
+system requirements SCSreqs:"SCS"
+for IntegratedSCS::DCS
+use constants SCSConstants  
+[
+	val WeightLimit = 1.8
+	val BandwidthCapacity = 0.100
+	val ThroughputCapacity = 1.2
+	val PowerCapacity = 2.5
+	
+		
+	requirement Weight_R1 : "weight of all components cannot exceed the maximum setting"
+	[
+		description this " shall have a maximum weight that is less than or equal to maximum setting"
+		rationale "budget set so that total SA system weight not exceeded"
+		
+		mitigates "Component weight totals exceed maximums"
+		issues "need to recognize that physical subsystems can present issues for a digital system"
+		see goal SCSStakeholderGoals.g1
+		
+	] 
+]
