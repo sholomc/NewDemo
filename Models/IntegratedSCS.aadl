@@ -3,6 +3,7 @@ public
 	
 	system SCS -- sensor control system template
   	-- Total system weight must comply with Weight_R1
+  	-- Bandwidth must comply with Comms_R1
   	end SCS;
 
 	system implementation SCS.singletier0
