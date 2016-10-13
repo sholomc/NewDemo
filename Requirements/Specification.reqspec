@@ -20,9 +20,9 @@ use constants SCSConstants
 	
 	requirement Comms_R1
 	[
-		description this " data volume across bus shall not exceed 80% of BandwidthCapacity"
-		rationale "All data from sensors to processor and from processor to actuators use the bus"
-		mitigates "the risk of contention for bus resource"
+		description this " data volume across bus shall not exceed 80% of PowerCapacity"
+		rationale "On-board power supply is limited by power source"
+		mitigates "the risk of contention for limited power resource"
 		
 	]
 	
@@ -34,4 +34,11 @@ use constants SCSConstants
 		
 	]	
 	
+		requirement Power_R1
+	[
+		description this " power utilization shall not exceed 60% of ThroughputCapacity"
+		rationale "Processor budget is fixed by size weight restrictions"
+		mitigates "the risk of contention for increased functionality"
+		
+	]
 ]
