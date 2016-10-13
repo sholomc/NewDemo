@@ -4,7 +4,7 @@ use constants SCSConstants
 	val WeightLimit = 1.8 kg
 	val BandwidthCapacity = 0.100 mbytesps
 	val ThroughputCapacity = 1.2  mips
-	val PowerCapacity = 2.5
+	val PowerCapacity = 4.5
 	
 		
 	requirement Weight_R1 : "weight of all components cannot exceed the maximum setting"
