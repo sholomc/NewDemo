@@ -1,5 +1,6 @@
 package PhysicalParts
 public
+with SEI;
 
 	processor powerpc
 		
@@ -25,5 +26,18 @@ public
 	end main_board.single;
 
 	abstract Power
+		features
+			powerout: out data port power;
+			powerin: in data port power;
+
 	end Power;
+
+	abstract implementation Power.V30
+
+		Properties
+			SEI::PowerCapacity => 2.5 W;
+
+	end Power.V30;
+
+
 end PhysicalParts;
